@@ -39,7 +39,7 @@ const Hero = () => {
             <div className="w-64 h-64 md:w-80 md:h-80 rounded-full p-1.5 bg-gradient-to-br from-blue-500 to-purple-600 relative z-10 shadow-2xl">
               <div className="w-full h-full rounded-full overflow-hidden bg-slate-950 border-4 border-slate-950">
                 <img 
-                  src="https://horizons-cdn.hostinger.com/83e403f5-bab4-4191-a2f7-26b4a59ab151/2e214426abf94bb326c2f6c1bcdfa0f8.jpg" 
+                  src="./public/fotos/me.jpeg" 
                   alt="João Paulo Cardoso do Carmo" 
                   className="w-full h-full object-cover object-top hover:scale-110 transition-transform duration-700 ease-in-out"
                 />
