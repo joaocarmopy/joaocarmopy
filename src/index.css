@@ -1,28 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 217.2 91.2% 59.8%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-    --destructive: 0 62.8% 30.6%;
+    --background: 150 10% 4%;
+    --foreground: 60 10% 95%;
+
+    --card: 150 8% 8%;
+    --card-foreground: 60 10% 95%;
+
+    --popover: 150 8% 8%;
+    --popover-foreground: 60 10% 95%;
+
+    --primary: 152 60% 45%;
+    --primary-foreground: 150 10% 4%;
+
+    --secondary: 150 8% 14%;
+    --secondary-foreground: 60 10% 90%;
+
+    --muted: 150 6% 12%;
+    --muted-foreground: 150 5% 55%;
+
+    --accent: 80 70% 55%;
+    --accent-foreground: 150 10% 4%;
+
+    --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 224.3 76.3% 48%;
+
+    --border: 150 8% 16%;
+    --input: 150 8% 16%;
+    --ring: 152 60% 45%;
+
+    --radius: 0.75rem;
+
+    /* Custom tokens */
+    --agro-green: 152 60% 45%;
+    --agro-lime: 80 70% 55%;
+    --agro-earth: 35 40% 30%;
+    --agro-dark: 150 10% 6%;
+    --agro-surface: 150 8% 10%;
+
+    --gradient-agro: linear-gradient(135deg, hsl(152, 60%, 45%), hsl(80, 70%, 55%));
+    --gradient-hero: linear-gradient(135deg, hsl(152, 60%, 35%), hsl(80, 70%, 45%));
+    --shadow-glow: 0 0 40px -10px hsl(152 60% 45% / 0.4);
+    --shadow-card: 0 8px 32px -8px hsl(0 0% 0% / 0.5);
+
+    --sidebar-background: 150 8% 6%;
+    --sidebar-foreground: 150 5% 55%;
+    --sidebar-primary: 152 60% 45%;
+    --sidebar-primary-foreground: 150 10% 4%;
+    --sidebar-accent: 150 8% 14%;
+    --sidebar-accent-foreground: 60 10% 90%;
+    --sidebar-border: 150 8% 16%;
+    --sidebar-ring: 152 60% 45%;
   }
 }
 
@@ -30,32 +63,51 @@
   * {
     @apply border-border;
   }
+
   body {
-    @apply bg-slate-950 text-foreground;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', sans-serif;
   }
 }
 
-html {
-  scroll-behavior: smooth;
-}
+@layer utilities {
+  .text-gradient-agro {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(152, 60%, 45%), hsl(80, 70%, 55%));
+  }
 
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 10px;
-}
+  .text-gradient-brand {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(152, 60%, 50%), hsl(80, 70%, 60%), hsl(45, 80%, 55%));
+  }
 
-::-webkit-scrollbar-track {
-  background: #0f172a;
-}
+  .bg-agro-gradient {
+    background: linear-gradient(135deg, hsl(152, 60%, 45%), hsl(80, 70%, 55%));
+  }
 
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #3b82f6, #8b5cf6);
-  border-radius: 5px;
-}
+  .bg-surface {
+    background-color: hsl(var(--agro-surface));
+  }
 
-::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #2563eb, #7c3aed);
+  .bg-surface-elevated {
+    background-color: hsl(var(--card));
+  }
+
+  .border-glow {
+    border-color: hsl(var(--primary) / 0.3);
+  }
+
+  .shadow-agro {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .glass {
+    background: hsl(var(--agro-dark) / 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
 }
