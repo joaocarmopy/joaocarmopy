@@ -96,7 +96,7 @@ const HeroSection = () => {
             Domine <span className="text-primary font-semibold">Python</span>, <span className="text-accent font-semibold">Inteligência Artificial</span> e <span className="text-primary font-semibold">Tecnologia</span> aplicados ao campo
           </p>
           <p className="text-muted-foreground max-w-xl mx-auto mb-10">
-            Cursos práticos, conteúdo gratuito e uma comunidade que está revolucionando o agronegócio com dados e automação.
+            Aulas vitalícias, conteúdo gratuito e uma comunidade que está revolucionando o agronegócio com dados e automação.
           </p>
         </motion.div>
 
@@ -138,7 +138,7 @@ const HeroSection = () => {
 const stats = [
   { icon: Youtube, value: 'YouTube', label: 'Conteúdo gratuito toda semana' },
   { icon: Users, value: 'Comunidade', label: 'Agro + Tech crescendo' },
-  { icon: BookOpen, value: '6 Cursos', label: 'Em desenvolvimento' },
+  { icon: BookOpen, value: '6 Cursos', label: 'Para o agro' },
   { icon: Target, value: '100%', label: 'Focado no Agro' },
 ];
 
@@ -213,8 +213,8 @@ const AboutSection = () => (
           className="space-y-6"
         >
           {[
-            { icon: Zap, title: 'Conteúdo Prático', desc: 'Nada de teoria pura. Tudo voltado para resolver problemas reais do agro.' },
-            { icon: Brain, title: 'IA Aplicada', desc: 'Detecção de pragas, previsão de safra, classificação de imagens por drone.' },
+            { icon: Zap, title: 'Conteúdo Prático', desc: 'Tudo voltado para resolver problemas reais do agro.' },
+            { icon: Brain, title: 'IA Aplicada', desc: 'Detecção de pragas, classificação de imagens por drone.' },
             { icon: BarChart3, title: 'Dados no Campo', desc: 'Dashboards, KPIs agrícolas e tomada de decisão data-driven.' },
             { icon: Tractor, title: 'Maquinário Inteligente', desc: 'Arquivos de operação, GPS, piloto automático e integração com softwares.' },
           ].map((item, i) => (
@@ -273,7 +273,7 @@ const courses: Course[] = [
   },
   {
     title: 'Inteligência Artificial no Agro',
-    description: 'Machine Learning e Deep Learning aplicados à agricultura. Detecção de pragas, previsão de safra e classificação de imagens.',
+    description: 'Machine Learning e Deep Learning aplicados à agricultura. Detecção de pragas e classificação de imagens.',
     icon: Brain,
     topics: ['Machine Learning', 'Visão Computacional'],
     level: 'Intermediário',
@@ -424,7 +424,7 @@ const ContentSection = () => (
       <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
         {[
           { title: 'Python do Zero para o Agro', desc: 'Série completa para quem nunca programou. Comece pelo fundamentos e aplique direto no campo.', icon: Code, color: 'primary' },
-          { title: 'IA na Prática', desc: 'Detecção de pragas com visão computacional, previsão de safra e modelos preditivos.', icon: Brain, color: 'accent' },
+          { title: 'IA na Prática', desc: 'Detecção de pragas com visão computacional e segmentação de imagens.', icon: Brain, color: 'accent' },
           { title: 'Dicas e Ferramentas', desc: 'QGIS, Google Earth Engine, automações e tudo que você precisa para modernizar suas operações.', icon: Cpu, color: 'primary' },
         ].map((item, i) => (
           <motion.div
